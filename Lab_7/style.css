@@ -1,0 +1,11 @@
+#textarea1 {
+    resize: none;
+    width: 550px;
+    height: 35px;
+    text-align: center;
+}
+#textarea2 {
+    resize: none;
+    width: 550px;
+    height: 150px;
+}

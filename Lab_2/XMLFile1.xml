@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding='UTF-8' ?>
+
+<!DOCTYPE RestaurantReviews [
+  <!ELEMENT RestaurantReviews (Restaurant)*>
+  <!ELEMENT Restaurant (Image|Name|Logo|Address|Phone|Reviews|Menu)*>
+  <!ELEMENT Image (Source|Width|Height)*>
+  <!ELEMENT Source (#PCDATA)>
+  <!ELEMENT Width (#PCDATA)>
+  <!ATTLIST Width
+            unit CDATA #REQUIRED>
+  <!ELEMENT Height (#PCDATA)>
+  <!ATTLIST Height
+            unit CDATA #REQUIRED>
+  <!ELEMENT Name (#PCDATA)>
+  <!ELEMENT Logo (#PCDATA)>
+  <!ELEMENT Address (AptNumber|Street|City|Suburb|Province|Postal|Country)*>
+  <!ELEMENT AptNumber (#PCDATA)>
+  <!ELEMENT Street (#PCDATA)>
+  <!ELEMENT City (#PCDATA)>
+  <!ELEMENT Suburb (#PCDATA)>
+  <!ELEMENT Province (#PCDATA)>
+  <!ELEMENT Postal (#PCDATA)>
+  <!ELEMENT Country (#PCDATA)>
+  <!ELEMENT Phone (Code|Number)*>
+  <!ELEMENT Code (#PCDATA)>
+  <!ELEMENT Number (#PCDATA)>
+  <!ELEMENT Reviews (Review)*>
+  <!ELEMENT Review (Reviewer|Date|Rating|Summary)*>
+  <!ELEMENT Reviewer (FirstName|MiddleName|LastName)*>
+  <!ELEMENT FirstName (#PCDATA)>
+  <!ELEMENT MiddleName (#PCDATA)>
+  <!ELEMENT LastName (#PCDATA)>
+  <!ELEMENT Date (#PCDATA)>
+  <!ELEMENT Rating (#PCDATA)>
+  <!ELEMENT Summary (#PCDATA)>
+  <!ELEMENT Menu (Appetizers|Entrees)*>
+  <!ELEMENT Appetizers (Item)*>
+  <!ELEMENT Item (FoodDescription|Order|BulkOrder|Price|Quantity)*>
+  <!ELEMENT FoodDescription (#PCDATA)>
+  <!ELEMENT BulkOrder (Price|Quantity)*>
+  <!ELEMENT Price (#PCDATA)>
+  <!ATTLIST Price
+            currency CDATA #REQUIRED>
+  <!ELEMENT Quantity (#PCDATA)>
+  <!ELEMENT Order (Price|Quantity)*>
+  <!ELEMENT Entrees (Item)*>
+]>
+<RestaurantReviews>
+  <Restaurant>
+    <Name>Laughing Man</Name>
+    <Logo>Visit the Laughing Man</Logo>
+    <Image>
+      <Source>laughing-man.gif</Source>
+      <Width unit="pixels">50</Width>
+      <Height unit="pixels">200</Height>
+    </Image>
+    <Address>
+      <AptNumber>2100</AptNumber>
+      <Street>Lakeview Road</Street>
+      <City>Ottawa</City>
+      <Suburb>Kanata</Suburb>
+      <Province>Ontario</Province>
+      <Postal>K2K 2K7</Postal>
+      <Country>Canada</Country>
+    </Address>
+    <Phone>
+      <Code>613</Code>
+      <Number>123-4567</Number>
+    </Phone>
+    <Reviews>
+      <Review>
+        <Reviewer>
+          <FirstName>Hunter</FirstName>
+          <MiddleName>S.</MiddleName>
+          <LastName>Thompson</LastName>
+        </Reviewer>
+        <Date>2015-01-10</Date>
+        <Rating>4</Rating>
+        <Summary>Laughing Man Inn is a completely restored Victorian hotel, and offers a warm and elegant atmosphere and gracious service.</Summary>
+      </Review>
+    </Reviews>
+    <Menu>
+      <Appetizers>
+        <Item>
+          <FoodDescription>Crab cakes with a creamy dill sauce served with crispy herbed fries.</FoodDescription>
+          <Order>
+            <Price currency = "CAD">23.00</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD"></Price>
+            <Quantity></Quantity>
+          </BulkOrder>
+        </Item>
+        <Item>
+          <FoodDescription>Garden vegetable soup with chocolate sauce.</FoodDescription>
+          <Order>
+            <Price currency = "CAD">15.00</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD"></Price>
+            <Quantity></Quantity>
+          </BulkOrder>
+        </Item>
+      </Appetizers>
+      <Entrees>
+        <Item>
+          <FoodDescription>Braised jumbo sea scallops on a sun-dried roast tomato base.</FoodDescription>
+          <Price currency = "CAD">39.00</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Free-range chicken breast stuffed with morels in a brandy sauce.</FoodDescription>
+          <Price currency = "CAD">31.00</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Roast pork loi on a bed of garlic ginger apple slaw.</FoodDescription>
+          <Price currency = "CAD">34.00</Price>
+          <Quantity>1</Quantity>
+        </Item>
+      </Entrees>
+    </Menu>
+  </Restaurant>
+  <Restaurant>
+    <Name>Gong's Asian Cuisine</Name>
+    <Logo></Logo>
+    <Image>
+      <Source>gong-asian-cuisine.gif</Source>
+      <Width unit="pixels">150</Width>
+      <Height unit="pixels">250</Height>
+    </Image>
+    <Address>
+      <AptNumber>1385</AptNumber>
+      <Street>Woodroffe Avenue</Street>
+      <City>Ottawa</City>
+      <Suburb></Suburb>
+      <Province>Ontario</Province>
+      <Postal>K2G 1V8</Postal>
+      <Country>Canada</Country>
+    </Address>
+    <Phone>
+      <Code>613</Code>
+      <Number>727-4723</Number>
+    </Phone>
+    <Reviews>
+      <Review>
+        <Reviewer>
+          <FirstName>Brenda</FirstName>
+          <MiddleName>P.</MiddleName>
+          <LastName>Smith</LastName>
+        </Reviewer>
+        <Date>2015-01-03</Date>
+        <Rating>4</Rating>
+        <Summary>The food is always consistent. A good variety of dim sum, sushi, Chinese and even VietNamese dishes. The service is quick and the food is plentiful. We sat down last night and within seconds of turning in our first Order, the plates were on the table! The teriyaki dishes had the right amount of sauce and weren't sickeningly sweet.The chicken, fish, and beef were perfectly cooked. The maki-rolls were neatly rolled, cut properly and seasoned well. Loved the General Tao chicken, the steamed BBQ pork buns, the eel sushi and the lovely eggplant. We will be going back again! I would higly recommend it.</Summary>
+      </Review>
+    </Reviews>
+    <Menu>
+      <Appetizers>
+        <Item>
+          <FoodDescription>Egg Roll</FoodDescription>
+          <Order>
+            <Price currency = "CAD">1.50</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD">15.00</Price>
+            <Quantity>12</Quantity>
+          </BulkOrder>
+        </Item>
+        <Item>
+          <FoodDescription>Spring Roll</FoodDescription>
+          <Order>
+            <Price currency = "CAD">1.80</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD">18.00</Price>
+            <Quantity>12</Quantity>
+          </BulkOrder>
+        </Item>
+        <Item>
+          <FoodDescription>Shrimp Chips</FoodDescription>
+          <Order>
+            <Price currency = "CAD">2.50</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD"></Price>
+            <Quantity></Quantity>
+          </BulkOrder>
+        </Item>
+        <Item>
+          <FoodDescription>Fried Noodles</FoodDescription>
+          <Order>
+            <Price currency = "CAD">1.00</Price>
+            <Quantity>1</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD"></Price>
+            <Quantity></Quantity>
+          </BulkOrder>
+        </Item>
+        <Item>
+          <FoodDescription>Sweet &amp; Sour Fried Wonton Skin</FoodDescription>
+          <Order>
+            <Price currency = "CAD">3.50</Price>
+            <Quantity>12</Quantity>
+          </Order>
+          <BulkOrder>
+            <Price currency = "CAD"></Price>
+            <Quantity></Quantity>
+          </BulkOrder>
+        </Item>
+      </Appetizers>
+      <Entrees>
+        <Item>
+          <FoodDescription>Scallops with Vegetables</FoodDescription>
+          <Price currency = "CAD">14.95</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Sweet and Sour Fish Cantonese Style</FoodDescription>
+          <Price currency = "CAD">13.95</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Shrimps with Vegetables</FoodDescription>
+          <Price currency = "CAD">12.95</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Beef with Mushroom</FoodDescription>
+          <Price currency = "CAD">10.25</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Beef with Tomato</FoodDescription>
+          <Price currency = "CAD">10.25</Price>
+          <Quantity>1</Quantity>
+        </Item>
+        <Item>
+          <FoodDescription>Beef with Broccoli</FoodDescription>
+          <Price currency = "CAD">10.25</Price>
+          <Quantity>1</Quantity>
+        </Item>
+      </Entrees>
+    </Menu>
+  </Restaurant>
+</RestaurantReviews>

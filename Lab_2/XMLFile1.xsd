@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RestaurantReviews">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Restaurant" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Restaurant">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Image" />
+        <xs:element ref="Name" />
+        <xs:element ref="Logo" />
+        <xs:element ref="Address" />
+        <xs:element ref="Phone" />
+        <xs:element ref="Reviews" />
+        <xs:element ref="Menu" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Image">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Source" />
+        <xs:element ref="Width" />
+        <xs:element ref="Height" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Source" type="xs:string" />
+  <xs:element name="Width">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Height">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:string" />
+  <xs:element name="Logo" type="xs:string" />
+  <xs:element name="Address">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="AptNumber" />
+        <xs:element ref="Street" />
+        <xs:element ref="City" />
+        <xs:element ref="Suburb" />
+        <xs:element ref="Province" />
+        <xs:element ref="Postal" />
+        <xs:element ref="Country" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AptNumber" type="xs:string" />
+  <xs:element name="Street" type="xs:string" />
+  <xs:element name="City" type="xs:string" />
+  <xs:element name="Suburb" type="xs:string" />
+  <xs:element name="Province" type="xs:string" />
+  <xs:element name="Postal" type="xs:string" />
+  <xs:element name="Country" type="xs:string" />
+  <xs:element name="Phone">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Code" />
+        <xs:element ref="Number" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Code" type="xs:string" />
+  <xs:element name="Number" type="xs:string" />
+  <xs:element name="Reviews">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Review" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Review">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Reviewer" />
+        <xs:element ref="Date" />
+        <xs:element ref="Rating" />
+        <xs:element ref="Summary" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reviewer">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="FirstName" />
+        <xs:element ref="MiddleName" />
+        <xs:element ref="LastName" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirstName" type="xs:string" />
+  <xs:element name="MiddleName" type="xs:string" />
+  <xs:element name="LastName" type="xs:string" />
+  <xs:element name="Date" type="xs:string" />
+  <xs:element name="Rating" type="xs:string" />
+  <xs:element name="Summary" type="xs:string" />
+  <xs:element name="Menu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Appetizers" />
+        <xs:element ref="Entrees" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Appetizers">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Item">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="FoodDescription" />
+        <xs:element ref="Order" />
+        <xs:element ref="BulkOrder" />
+        <xs:element ref="Price" />
+        <xs:element ref="Quantity" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FoodDescription" type="xs:string" />
+  <xs:element name="BulkOrder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Price" />
+        <xs:element ref="Quantity" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Price">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="currency" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Quantity" type="xs:string" />
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Price" />
+        <xs:element ref="Quantity" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Entrees">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

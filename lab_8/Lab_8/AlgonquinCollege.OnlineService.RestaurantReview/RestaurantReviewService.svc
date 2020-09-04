@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AlgonquinCollege.OnlineService.RestaurantReview.RestaurantReviewService" CodeBehind="RestaurantReviewService.svc.cs" %>

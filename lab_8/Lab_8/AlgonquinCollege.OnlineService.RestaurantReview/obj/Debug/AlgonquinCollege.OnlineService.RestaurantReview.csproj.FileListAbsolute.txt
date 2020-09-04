@@ -1,0 +1,7 @@
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\bin\AlgonquinCollege.OnlineService.RestaurantReview.dll.config
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\bin\AlgonquinCollege.OnlineService.RestaurantReview.dll
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\bin\AlgonquinCollege.OnlineService.RestaurantReview.pdb
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\obj\Debug\AlgonquinCollege.OnlineService.RestaurantReview.csprojAssemblyReference.cache
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\obj\Debug\AlgonquinCollege.OnlineService.RestaurantReview.csproj.CoreCompileInputs.cache
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\obj\Debug\AlgonquinCollege.OnlineService.RestaurantReview.dll
+D:\WebDev\WP2\Lab8\AlgonquinCollege.OnlineService.RestaurantReview\AlgonquinCollege.OnlineService.RestaurantReview\obj\Debug\AlgonquinCollege.OnlineService.RestaurantReview.pdb

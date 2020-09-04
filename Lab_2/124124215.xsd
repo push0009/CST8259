@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Studio 2018 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://www.algonquincollege.com/onlineservice/review"
+		   xmlns:alg ="http://www.algonquincollege.com/onlineservice/review"
+		   elementFormDefault="qualified" >
+  <xs:element name="RestaurantReviews">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Restaurant">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Logo" type="xs:string" />
+              <xs:element minOccurs="0" name="Image">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Source" type="xs:string" />
+                    <xs:element minOccurs="0" name="Width">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedByte">
+                            <xs:attribute name="unit" type="xs:string" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Height">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedByte">
+                            <xs:attribute name="unit" type="xs:string" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="AptNumber" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="Street" type="xs:string" />
+                    <xs:element minOccurs="0" name="City" type="xs:string" />
+                    <xs:element minOccurs="0" name="Suburb" type="xs:string" />
+                    <xs:element minOccurs="0" name="Province" type="xs:string" />
+                    <xs:element minOccurs="0" name="Postal" type="xs:string" />
+                    <xs:element minOccurs="0" name="Country" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Phone">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Code" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="Number" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Reviews">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Review">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Reviewer">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+                                <xs:element minOccurs="0" name="MiddleName" type="xs:string" />
+                                <xs:element minOccurs="0" name="LastName" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Date" type="xs:date" />
+                          <xs:element minOccurs="0" name="Rating" type="xs:unsignedByte" />
+                          <xs:element minOccurs="0" name="Summary" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Menu">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Appetizers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Item">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="FoodDescription" type="xs:string" />
+                                <xs:element minOccurs="0" name="Order">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="Price">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:decimal">
+                                              <xs:attribute name="currency" type="xs:string" use="optional" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element minOccurs="0" name="Quantity" type="xs:unsignedByte" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="BulkOrder">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="Price">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="currency" type="xs:string" use="optional" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element minOccurs="0" name="Quantity" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Entrees">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Item">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="FoodDescription" type="xs:string" />
+                                <xs:element minOccurs="0" name="Price">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:decimal">
+                                        <xs:attribute name="currency" type="xs:string" use="optional" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="Quantity" type="xs:unsignedByte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
